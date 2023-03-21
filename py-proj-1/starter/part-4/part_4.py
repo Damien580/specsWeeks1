@@ -3,8 +3,24 @@
 ## Create five input statements to gather user's book they want to input to the system. After that be sure to turn it into a function.
 
 # Code here
+def create_book():
+    book_title = input("What's your favorite book? ")
+    book_author = input("Who wrote your favorite book?")
+    book_year = input("What year was your favorite book published? ")
+    book_rating = input("What's the rating of your favorite book ")
+    book_pages = input("How many pages does your favporite book have? ")
+    
+    book_dictionary = {
+        "title": book_title,
+        "author": book_author,
+        "year": book_year,
+        "rating": book_rating,
+        "pages": book_pages
+    }
+    
+    return book_dictionary
 
-
+print(create_book())
 ### Step 2 - Type conversion
 
 ## Now convert the proper data-types front strings to either floats or ints depending on what it is. Feel free to comment out your old function so you don't get an error, or copy/paste and give it a new name.
