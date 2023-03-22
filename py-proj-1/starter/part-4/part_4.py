@@ -85,18 +85,17 @@
 # Code here
 fav_books = ["Wizard and Glass", "Ender's Game", "Dune", "The Perfect Shadow"]
 
-new_book = input("What is the book you want to add? ")
-if type(new_book) == str :
-    fav_books.append(new_book)
-else: 
-   print(input("Please type the title of a book"))
-    
-see_all = input("Would you like to see all available books? ")
-if see_all.lower() == "yes" or see_all.lower() == "y":
-    print(fav_books)
-elif see_all.lower() == "no" or see_all.lower() == "n":
-    print("Thank you.")
-    
-user_exit = input("Would you like to exit menu? ")
-while user_exit.lower() != "no" or user_exit.lower() != "n":
-    
+def main_menu():
+    active = True
+    while active:
+        answer = input("Press 1 to Enter a New Book, Press 2 to See All Books, Press 3 to exit menu. ")
+        if answer == "1":
+            new_book = input("What is the book you want to add? ")
+            fav_books.append(new_book)
+        elif answer == "2":
+            # see_all = input("Would you like to see all available books? ")
+            print(fav_books)                
+        else:   
+            active = False
+        
+main_menu()
