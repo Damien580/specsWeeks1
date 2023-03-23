@@ -83,7 +83,7 @@ def create_book():
 ## Now add a while loop to your main menu to keep it alive, and continually asking for input until the user chooses to exit the program. Call the main menu to ensure it functions properly.
 
 # Code here
-fav_books = [""]
+fav_books = ["{'title': 'The Perfect Shadow', 'author': 'Brent Weeks', 'year': 2011, 'rating': 5.0, 'pages': 144}"]
 
 def main_menu():
     active = True
