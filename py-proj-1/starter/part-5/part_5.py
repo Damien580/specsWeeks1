@@ -3,13 +3,6 @@
 ## This step's instructions explains how to use the open() function, to write and read info from a .txt file. Follow the instructions to create and call a function to add a book, based off of the previous dictionaries for our library, to the .txt file properly formatted with commas as separators.
 
 # # Code here
-with open("library.txt", "w") as f:
-    f.write("title, author, year, rating, pages\n")
-### Step 2 - Read data from a .txt
-
-## Now take your previously create function which prints info about all the books in your library, but gets the info from a list, and make it work by reading the information in your home library's .txt document. This will take some new logic, but you can do it.
-
-# Code here
 def create_book():
     book_title = input("What's your book titled? - ")
     book_author = input("Who wrote your book? - ")
@@ -25,9 +18,12 @@ def create_book():
         "pages": book_pages
     }
     
-    return book_dictionary
+### Step 2 - Read data from a .txt
 
-fav_books = ["{'title': 'The Perfect Shadow', 'author': 'Brent Weeks', 'year': 2011, 'rating': 5.0, 'pages': 144}"]
+## Now take your previously create function which prints info about all the books in your library, but gets the info from a list, and make it work by reading the information in your home library's .txt document. This will take some new logic, but you can do it.
+
+# Code here
+
 
 def main_menu():
     active = True
@@ -38,25 +34,21 @@ def main_menu():
             with open("library.txt", "a") as f:
                 f.write(f"{new_book['title']}, {new_book['author']}, {new_book['year']}, {new_book['rating']}, {new_book['pages']}\n") 
         elif answer == "2":
-            print(fav_books)                
+            print("\nHere are all your books...\n")
+    
+        with open("library.txt", "r") as f:
+            file = f.readlines()
+        
+        for line in file:
+            title, author, year, rating, pages = line.split(", ")
+
+            print(f"Title: {title}, Author: {author}, Year: {year}, Rating: {rating}, Pages: {pages}")                
         else:   
             active = False
         
 main_menu()
-
-with open("library.txt", "r") as f:
-    file = f.readlines()
     
-    for line in file:
-       title, author, year, rating, pages = line.split(", ")
-       
-       book_dictionary = {
-           "title": title,
-           "author": author,
-           "year": int(year),
-           "rating": float(rating),
-           "pages": int(pages)
-       }
+
 
 if __name__ == "__main__":
         main_menu()

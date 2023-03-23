@@ -1,2 +1,2 @@
 title, author, year, rating, pages
-Wizard and Glass, Stephen King, 1997, 4.2, 787
+The Way of Shadows, Brent Weeks, 2008, 4.2, 645
