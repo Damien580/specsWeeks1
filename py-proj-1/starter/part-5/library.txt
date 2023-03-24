@@ -1,2 +1,3 @@
-title, author, year, rating, pages
 The Way of Shadows, Brent Weeks, 2008, 4.2, 645
+Wizard and Glass, Stephen King, 1997, 4.2, 787
+Brave New World, Aldous Huxley, 1932, 4.3, 288
